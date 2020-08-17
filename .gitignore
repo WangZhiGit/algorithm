@@ -1,0 +1,11 @@
+### Build ###
+target/
+
+### Maven ###
+.mvn
+mvnw
+mvnw.cmd
+
+### IntelliJ IDEA ###
+.idea
+algorithm.iml
