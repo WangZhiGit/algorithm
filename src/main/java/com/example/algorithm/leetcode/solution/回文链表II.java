@@ -9,10 +9,10 @@ public class 回文链表II {
         }
 
         ListNode slow = head;
-        ListNode quick = head;
-        while (quick.next != null && quick.next.next != null){
+        ListNode fast = head;
+        while (fast.next != null && fast.next.next != null){
             slow = slow.next;
-            quick = quick.next.next;
+            fast = fast.next.next;
         }
 
         ListNode reverseHead = reverseList(slow.next);
