@@ -4,20 +4,20 @@ import com.example.algorithm.leetcode.entity.ListNode;
 
 public class 回文链表II {
     public boolean isPalindrome(ListNode head) {
-        if (head == null || head.next == null){
+        if (head == null || head.next == null) {
             return true;
         }
 
         ListNode slow = head;
         ListNode fast = head;
-        while (fast.next != null && fast.next.next != null){
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
         ListNode reverseHead = reverseList(slow.next);
-        while (head != null && reverseHead != null){
-            if (head.val != reverseHead.val){
+        while (head != null && reverseHead != null) {
+            if (head.val != reverseHead.val) {
                 return false;
             }
             head = head.next;
@@ -27,14 +27,14 @@ public class 回文链表II {
         return true;
     }
 
-    public ListNode reverseList(ListNode head){
-        if (head == null || head.next ==null){
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
             return head;
         }
 
         ListNode result = null;
         ListNode temp;
-        while (head != null){
+        while (head != null) {
             temp = head.next;
             head.next = result;
             result = head;

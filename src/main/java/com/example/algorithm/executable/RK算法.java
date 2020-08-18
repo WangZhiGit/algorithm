@@ -1,7 +1,7 @@
 package com.example.algorithm.executable;
 
 public class RK算法 {
-    public static int rabinKarp(String str, String pattern){
+    public static int rabinKarp(String str, String pattern) {
         //主串长度
         int m = str.length();
         //模式串的长度
@@ -11,7 +11,7 @@ public class RK算法 {
         //计算主串当中第一个和模式串等长的子串hash值
         int strCode = hash(str.substring(0, n));
         //用模式串的hash值和主串的局部hash值比较。如果匹配，则进行精确比较；如果不匹配，计算主串中相邻子串的hash值。
-        for(int i = 0; i < m - n + 1; i++) {
+        for (int i = 0; i < m - n + 1; i++) {
             if (strCode == patternCode && compareString(i, str, pattern)) {
                 return i;
             }
@@ -27,7 +27,8 @@ public class RK算法 {
         int hashcode = 0;
         //这里采用最简单的hashcode计算方式：把a当做1，把b当中2，把c当中3.....然后按位相加
         for (int i = 0; i < str.length(); i++) {
-            hashcode += str.charAt(i) - 'a'; }
+            hashcode += str.charAt(i) - 'a';
+        }
         return hashcode;
     }
 

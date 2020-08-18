@@ -9,7 +9,7 @@ import java.util.Map;
 public class HashMap遍历 {
     //迭代器 EntrySet
     @Test
-    public void testEntrySet(){
+    public void testEntrySet() {
         //创建并赋值HashMap
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Java");
@@ -20,7 +20,7 @@ public class HashMap遍历 {
 
         //遍历
         Iterator<Map.Entry<Integer, String>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Map.Entry<Integer, String> entry = iterator.next();
             System.out.println(entry.getKey() + ", " + entry.getValue());
         }
@@ -28,7 +28,7 @@ public class HashMap遍历 {
 
     //迭代器 KeySet
     @Test
-    public void testKeySet(){
+    public void testKeySet() {
         //创建并赋值HashMap
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Java");
@@ -39,7 +39,7 @@ public class HashMap遍历 {
 
         //遍历
         Iterator<Integer> iterator = map.keySet().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Integer key = iterator.next();
             System.out.println(key + ", " + map.get(key));
         }
@@ -47,7 +47,7 @@ public class HashMap遍历 {
 
     //ForEach EntrySet
     @Test
-    public void testForEachEntrySet(){
+    public void testForEachEntrySet() {
         //创建并赋值HashMap
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Java");
@@ -57,14 +57,14 @@ public class HashMap遍历 {
         map.put(5, "Java中文社群");
 
         //遍历
-        for (Map.Entry<Integer, String> entry : map.entrySet()){
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ", " + entry.getValue());
         }
     }
 
     //ForEach KeySet
     @Test
-    public void testForEachKeySet(){
+    public void testForEachKeySet() {
         //创建并赋值HashMap
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Java");
@@ -74,14 +74,14 @@ public class HashMap遍历 {
         map.put(5, "Java中文社群");
 
         //遍历
-        for (Integer key : map.keySet()){
+        for (Integer key : map.keySet()) {
             System.out.println(key + ", " + map.get(key));
         }
     }
 
     //Lambda
     @Test
-    public void testLambda(){
+    public void testLambda() {
         //创建并赋值HashMap
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Java");
@@ -98,7 +98,7 @@ public class HashMap遍历 {
 
     //Streams API 单线程
     @Test
-    public void testStreamsAPISingle(){
+    public void testStreamsAPISingle() {
         //创建并赋值HashMap
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Java");
@@ -115,7 +115,7 @@ public class HashMap遍历 {
 
     //Streams API 多线程
     @Test
-    public void testStreamsAPIMulti(){
+    public void testStreamsAPIMulti() {
         //创建并赋值HashMap
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Java");

@@ -5,18 +5,18 @@ import com.example.algorithm.leetcode.entity.TreeNode;
 
 public class 有序链表转换二叉搜索树 {
     public TreeNode sortedListToBST(ListNode head) {
-        if (head == null){
+        if (head == null) {
             return null;
         }
 
-        if (head.next == null){
+        if (head.next == null) {
             return new TreeNode(head.val);
         }
 
         ListNode slowPre = head;
         ListNode slow = head.next;
         ListNode fast = head.next;
-        while (fast.next != null && fast.next.next != null){
+        while (fast.next != null && fast.next.next != null) {
             slowPre = slowPre.next;
             slow = slow.next;
             fast = fast.next.next;

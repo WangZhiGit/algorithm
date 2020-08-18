@@ -10,15 +10,15 @@ public class 回文链表 {
         List<Integer> list = new ArrayList<>();
 
         ListNode currentNode = head;
-        while (currentNode != null){
+        while (currentNode != null) {
             list.add(currentNode.val);
             currentNode = currentNode.next;
         }
 
         int front = 0;
-        int back =list.size() - 1;
-        while (front < back){
-            if (!list.get(front).equals(list.get(back))){
+        int back = list.size() - 1;
+        while (front < back) {
+            if (!list.get(front).equals(list.get(back))) {
                 return false;
             }
 

@@ -12,8 +12,8 @@ public class 二叉树的中序遍历 {
         return result;
     }
 
-    public void inorder(TreeNode root, List<Integer> result){
-        if (root == null){
+    public void inorder(TreeNode root, List<Integer> result) {
+        if (root == null) {
             return;
         }
 

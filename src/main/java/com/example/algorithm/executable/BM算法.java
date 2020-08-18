@@ -3,8 +3,8 @@ package com.example.algorithm.executable;
 public class BM算法 {
     //在模式串中，查找index下标之前的字符是否和坏字符匹配
     private static int findCharacter(String pattern, char badCharacter, int index) {
-        for (int i = index - 1; i >= 0; i--){
-            if (pattern.charAt(i) == badCharacter){
+        for (int i = index - 1; i >= 0; i--) {
+            if (pattern.charAt(i) == badCharacter) {
                 return i;
             }
         }
