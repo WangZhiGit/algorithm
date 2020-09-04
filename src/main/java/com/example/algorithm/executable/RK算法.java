@@ -25,7 +25,7 @@ public class RK算法 {
 
     private static int hash(String str) {
         int hashcode = 0;
-        //这里采用最简单的hashcode计算方式：把a当做1，把b当中2，把c当中3.....然后按位相加
+        //这里采用最简单的hashcode计算方式：把a当做0，把b当中1，把c当中2.....然后按位相加
         for (int i = 0; i < str.length(); i++) {
             hashcode += str.charAt(i) - 'a';
         }

@@ -3,6 +3,7 @@ package com.example.algorithm.leetcode.solution;
 import java.util.Arrays;
 
 public class 最大数 {
+    //给定一组非负整数，重新排列它们的顺序使之组成一个最大的整数。
     public String largestNumber(int[] nums) {
         if (nums == null || nums.length == 0) {
             return "";

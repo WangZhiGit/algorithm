@@ -4,7 +4,7 @@ public class KMP算法 {
     // KMP算法主体逻辑。str是主串，pattern是模式串
     public static int kmp(String str, String pattern) {
         //预处理，生成next数组
-        int[] next = getNexts(pattern);
+        int[] next = getNext(pattern);
         int j = 0;
         //主循环，遍历主串字符
         for (int i = 0; i < str.length(); i++) {
@@ -25,7 +25,7 @@ public class KMP算法 {
 
 
     // 生成Next数组
-    private static int[] getNexts(String pattern) {
+    private static int[] getNext(String pattern) {
         int[] next = new int[pattern.length()];
         int j = 0;
         for (int i = 2; i < pattern.length(); i++) {

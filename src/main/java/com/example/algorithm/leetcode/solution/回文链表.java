@@ -10,6 +10,7 @@ public class 回文链表 {
         List<Integer> list = new ArrayList<>();
 
         ListNode currentNode = head;
+        //链表转换成列表，从头和尾依次对比
         while (currentNode != null) {
             list.add(currentNode.val);
             currentNode = currentNode.next;

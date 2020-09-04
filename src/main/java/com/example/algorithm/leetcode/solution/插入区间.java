@@ -1,9 +1,6 @@
 package com.example.algorithm.leetcode.solution;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.LinkedList;
-import java.util.List;
 
 public class 插入区间 {
     public int[][] insert(int[][] intervals, int[] newInterval) {

@@ -13,6 +13,7 @@ public class 有序链表转换二叉搜索树 {
             return new TreeNode(head.val);
         }
 
+        //slowPre将链表在slowPre和slow之间断开，取slow.val为根节点，然后分别递归head和slow.next
         ListNode slowPre = head;
         ListNode slow = head.next;
         ListNode fast = head.next;

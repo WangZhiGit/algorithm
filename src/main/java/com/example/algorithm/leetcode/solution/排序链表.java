@@ -3,6 +3,9 @@ package com.example.algorithm.leetcode.solution;
 import com.example.algorithm.leetcode.entity.ListNode;
 
 public class 排序链表 {
+    private ListNode temp;
+
+    //在O(nlogn)时间复杂度和常数级空间复杂度下，对链表进行排序。
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -19,8 +22,8 @@ public class 排序链表 {
         slow.next = null;
         ListNode left = sortList(head);
         //合并
-        ListNode result = new ListNode(0);
-        ListNode temp = result;
+        ListNode dummy = new ListNode(0);
+        ListNode temp = dummy;
         while (left != null && right != null) {
             if (left.val < right.val) {
                 temp.next = left;
@@ -33,6 +36,6 @@ public class 排序链表 {
         }
 
         temp.next = left != null ? left : right;
-        return result.next;
+        return dummy.next;
     }
 }
