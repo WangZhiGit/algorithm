@@ -3,6 +3,7 @@ package com.example.algorithm.leetcode.solution;
 import java.util.*;
 
 public class 递增子序列 {
+    //给定一个整型数组, 你的任务是找到所有该数组的递增子序列，递增子序列的长度至少是2
     public List<List<Integer>> findSubsequences(int[] nums) {
         Set<List<Integer>> result = new HashSet<>();
         findSubsequences(result, nums, 0, new LinkedList<>());
