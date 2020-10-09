@@ -1,4 +1,4 @@
-package com.example.algorithm;
+package com.example.algorithm.leetcode.solution;
 
 import java.util.ArrayList;
 import java.util.List;
